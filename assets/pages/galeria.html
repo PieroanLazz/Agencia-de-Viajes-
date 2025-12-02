@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Explora el Mundo</title>
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* ESTILOS ESPECÍFICOS PARA LA GALERÍA */
+        .galeria-section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .galeria-filtros {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .filtro-btn {
+            padding: var(--spacing-sm) var(--spacing-md);
+            background-color: var(--white);
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            font-family: var(--font-primary);
+        }
+
+        .filtro-btn:hover,
+        .filtro-btn.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .galeria-item {
+            position: relative;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 250px; /* Altura fija para todas las imágenes */
+            background-color: var(--light-color);
+        }
+
+        .galeria-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Esto asegura que todas las imágenes mantengan la misma proporción */
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .galeria-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .galeria-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: var(--white);
+            padding: var(--spacing-lg) var(--spacing-md) var(--spacing-md);
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-item:hover .galeria-overlay {
+            transform: translateY(0);
+        }
+
+        .galeria-overlay h4 {
+            margin-bottom: var(--spacing-xs);
+            font-size: var(--fs-medium);
+            font-weight: 600;
+        }
+
+        .galeria-overlay p {
+            font-size: var(--fs-small);
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .galeria-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: var(--spacing-sm);
+            }
+            
+            .galeria-item {
+                height: 220px;
+            }
+            
+            .galeria-filtros {
+                gap: var(--spacing-xs);
+            }
+            
+            .filtro-btn {
+                padding: var(--spacing-xs) var(--spacing-sm);
+                font-size: var(--fs-small);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .galeria-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .galeria-item {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +51 987 654 321</span>
+                <span><i class="fas fa-envelope"></i> info@exploraelmundo.com</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">
+                <i class="fas fa-globe-americas"></i>
+                <span>ExploraElMundo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="destino.html">Destinos</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="galeria.html" class="active">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado de página -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Galería de Viajes</h1>
+            <p>Un vistazo a los momentos más espectaculares alrededor del mundo</p>
+        </div>
+    </section>
+
+    <!-- Sección de galería -->
+    <section class="galeria-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Momentos</h2>
+                <p>Capturamos la esencia de cada destino para inspirar tu próximo viaje</p>
+            </div>
+            
+            <!-- Nota: Los botones de filtro son decorativos ya que no usamos JS -->
+            <div class="galeria-filtros">
+                <button class="filtro-btn active">Todos</button>
+                <button class="filtro-btn">Europa</button>
+                <button class="filtro-btn">Asia</button>
+                <button class="filtro-btn">América</button>
+                <button class="filtro-btn">África</button>
+                <button class="filtro-btn">Oceanía</button>
+            </div>
+            
+            <div class="galeria-grid">
+                <!-- Francia -->
+                <div class="galeria-item">
+                    <img src="../img/francia.jpg" alt="Torre Eiffel en París, Francia al atardecer">
+                    <div class="galeria-overlay">
+                        <h4>Francia</h4>
+                        <p>Torre Eiffel al atardecer</p>
+                    </div>
+                </div>
+
+                <!-- Italia -->
+                <div class="galeria-item">
+                    <img src="../img/italia.jpg" alt="Coliseo Romano en Roma, Italia">
+                    <div class="galeria-overlay">
+                        <h4>Italia</h4>
+                        <p>Coliseo Romano histórico</p>
+                    </div>
+                </div>
+
+                <!-- Japón -->
+                <div class="galeria-item">
+                    <img src="../img/japon.jpg" alt="Templo tradicional en Kioto, Japón">
+                    <div class="galeria-overlay">
+                        <h4>Japón</h4>
+                        <p>Templos tradicionales</p>
+                    </div>
+                </div>
+
+                <!-- Brasil -->
+                <div class="galeria-item">
+                    <img src="../img/brasil.jpg" alt="Cristo Redentor en Río de Janeiro, Brasil">
+                    <div class="galeria-overlay">
+                        <h4>Brasil</h4>
+                        <p>Cristo Redentor</p>
+                    </div>
+                </div>
+
+                <!-- Australia -->
+                <div class="galeria-item">
+                    <img src="../img/australia.jpg" alt="Ópera de Sídney, Australia">
+                    <div class="galeria-overlay">
+                        <h4>Australia</h4>
+                        <p>Ópera de Sídney</p>
+                    </div>
+                </div>
+
+                <!-- Egipto -->
+                <div class="galeria-item">
+                    <img src="../img/egipto.jpg" alt="Pirámides de Giza, Egipto">
+                    <div class="galeria-overlay">
+                        <h4>Egipto</h4>
+                        <p>Pirámides de Giza</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>ExploraElMundo</span>
+                    </a>
+                    <p>Inspirando viajes inolvidables desde 2010. Descubre el mundo con nosotros.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="destino.html">Destinos</a></li>
+                        <li><a href="experiencias.html">Experiencias</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Destinos Populares</h3>
+                    <ul>
+                        <li><a href="francia.html">Francia</a></li>
+                        <li><a href="japon.html">Japón</a></li>
+                        <li><a href="brasil.html">Brasil</a></li>
+                        <li><a href="italia.html">Italia</a></li>
+                        <li><a href="australia.html">Australia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Suscríbete a nuestro Newsletter</h3>
+                    <p>Recibe ofertas exclusivas e inspiración para tus próximos viajes.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ExploraElMundo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="btn-top" aria-label="Ir arriba">↑</button>
+
+    <script src="../scripts/app.js"></script>
+</body>
+</html>

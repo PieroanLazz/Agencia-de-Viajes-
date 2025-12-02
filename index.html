@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora el Mundo - Descubre Destinos Fascinantes</title>
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Barra superior con información de contacto y redes sociales -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +51 987 654 321</span>
+                <span><i class="fas fa-envelope"></i> info@exploraelmundo.com</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de navegación fija -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-globe-americas"></i>
+                <span>ExploraElMundo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="assets/pages/destino.html">Destinos</a></li>
+                <li><a href="assets/pages/experiencias.html">Experiencias</a></li>
+                <li><a href="assets/pages/galeria.html">Galería</a></li>
+                <li><a href="assets/pages/contacto.html">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner principal con video -->
+    <section class="banner">
+        <div class="video-container">
+            <video autoplay muted loop id="banner-video">
+                <source src="assets/video/PinDown.io_@seasiis_1760492183.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento video.
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="banner-content">
+            <h1>Descubre los Países Más Fascinantes del Mundo</h1>
+            <p>Explora culturas, paisajes y experiencias únicas que transformarán tu forma de ver el mundo</p>
+            <a href="#destinos" class="btn btn-primary">Explorar Destinos</a>
+        </div>
+    </section>
+
+    <!-- Sección de introducción -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Viaja, Conecta y Descubre</h2>
+                <p>Nuestra misión es inspirarte a explorar los rincones más increíbles del planeta</p>
+            </div>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>En <strong>ExploraElMundo</strong>, creemos que viajar es una de las experiencias más enriquecedoras que puede vivir una persona. Cada país, cada cultura y cada paisaje tiene algo único que ofrecer.</p>
+                    <p>Nuestro equipo de expertos en viajes ha seleccionado los destinos más fascinantes para ayudarte a planificar tu próxima aventura. Desde las bulliciosas ciudades hasta los remotos paraísos naturales, tenemos algo para cada tipo de viajero.</p>
+                </div>
+                <div class="intro-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Países</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">200+</span>
+                        <span class="stat-label">Destinos</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10k+</span>
+                        <span class="stat-label">Viajeros</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de destinos populares -->
+    <section class="destinos-section" id="destinos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Destinos Populares</h2>
+                <p>Descubre los países más visitados y recomendados por nuestros viajeros</p>
+            </div>
+            <div class="destinos-grid">
+                <!-- Tarjeta 1: Francia -->
+                <article class="destino-card">
+                    <div class="card-image">
+                        <img src="assets/img/francia.jpg" alt="Torre Eiffel en París, Francia">
+                        <div class="card-overlay">
+                            <a href="./assets/pages/francia.html" class="btn btn-outline">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Francia</h3>
+                        <p>Explora la elegancia histórica y la gastronomía refinada de Francia, cuna de la revolución y el arte.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Europa</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2: Japón -->
+                <article class="destino-card">
+                    <div class="card-image">
+                        <img src="assets/img/japon.jpg" alt="Templo en Kioto, Japón">
+                        <div class="card-overlay">
+                            <a href="./assets/pages/japon.html" class="btn btn-outline">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Japón</h3>
+                        <p>Descubre la fusión perfecta de tradición milenaria y tecnología avanzada en las islas del sol naciente.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Asia</span>
+                            <span><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3: Brasil -->
+                <article class="destino-card">
+                    <div class="card-image">
+                        <img src="assets/img/brasil.jpg" alt="Cristo Redentor en Río de Janeiro, Brasil">
+                        <div class="card-overlay">
+                            <a href="./assets/pages/brasil.html" class="btn btn-outline">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Brasil</h3>
+                        <p>Vive la pasión del carnaval, las playas infinitas y la biodiversidad exuberante de la tierra del samba.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> América del Sur</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 4: Italia -->
+                <article class="destino-card">
+                    <div class="card-image">
+                        <img src="assets/img/italia.jpg" alt="Coliseo Romano en Roma, Italia">
+                        <div class="card-overlay">
+                            <a href="./assets/pages/italia.html" class="btn btn-outline">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Italia</h3>
+                        <p>Sumérgete en el legado del Imperio Romano, el arte renacentista y la cocina mediterránea inolvidable.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Europa</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 5: Australia -->
+                <article class="destino-card">
+                    <div class="card-image">
+                        <img src="assets/img/australia.jpg" alt="Ópera de Sídney, Australia">
+                        <div class="card-overlay">
+                            <a href="./assets/pages/australia.html" class="btn btn-outline">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Australia</h3>
+                        <p>Experimenta la vida salvaje, las costas vírgenes y la cultura indígena en el continente del sur.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Oceanía</span>
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 6: Egipto -->
+                <article class="destino-card">
+                    <div class="card-image">
+                        <img src="assets/img/egipto.jpg" alt="Pirámides de Giza, Egipto">
+                        <div class="card-overlay">
+                            <a href="./assets/pages/egipto.html" class="btn btn-outline">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Egipto</h3>
+                        <p>Viaja en el tiempo a través de faraones, esfinges y el Nilo, epicentro de una civilización milenaria.</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> África</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de video de YouTube -->
+    <section class="video-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Inspírate para tu Próximo Viaje</h2>
+                <p>Descubre los destinos más increíbles a través de estos videos</p>
+            </div>
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/l9WJ6PspaW4?si=y4nF9LOgsd8EAZIJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+         </div>
+    </section>
+
+    <!-- Sección de tabla de información -->
+    <section class="info-table-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Comparativa de Destinos</h2>
+                <p>Información útil para planificar tu próximo viaje</p>
+            </div>
+            <div class="table-container">
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>País</th>
+                            <th>Mejor Época</th>
+                            <th>Idioma Oficial</th>
+                            <th>Moneda</th>
+                            <th>Visa para Peruanos</th>
+                            <th>Costo Promedio (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Francia</td>
+                            <td>Abril-Junio</td>
+                            <td>Francés</td>
+                            <td>Euro (€)</td>
+                            <td>Schengen</td>
+                            <td>$1,200 - $2,500</td>
+                        </tr>
+                        <tr>
+                            <td>Japón</td>
+                            <td>Marzo-Mayo</td>
+                            <td>Japonés</td>
+                            <td>Yen (¥)</td>
+                            <td>No requerida</td>
+                            <td>$1,500 - $3,000</td>
+                        </tr>
+                        <tr>
+                            <td>Brasil</td>
+                            <td>Mayo-Octubre</td>
+                            <td>Portugués</td>
+                            <td>Real (R$)</td>
+                            <td>No requerida</td>
+                            <td>$800 - $1,800</td>
+                        </tr>
+                        <tr>
+                            <td>Italia</td>
+                            <td>Abril-Junio</td>
+                            <td>Italiano</td>
+                            <td>Euro (€)</td>
+                            <td>Schengen</td>
+                            <td>$1,000 - $2,200</td>
+                        </tr>
+                        <tr>
+                            <td>Australia</td>
+                            <td>Septiembre-Noviembre</td>
+                            <td>Inglés</td>
+                            <td>Dólar Australiano (A$)</td>
+                            <td>E-visa</td>
+                            <td>$1,800 - $3,500</td>
+                        </tr>
+                        <tr>
+                            <td>Egipto</td>
+                            <td>Octubre-Abril</td>
+                            <td>Árabe</td>
+                            <td>Libra Egipcia (E£)</td>
+                            <td>Visa on arrival</td>
+                            <td>$700 - $1,500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de formulario de contacto -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Tienes Preguntas sobre algún Destino?</h2>
+                <p>Contáctanos y te ayudaremos a planificar tu viaje ideal</p>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Dirección</h4>
+                            <p>Av. Viajeros 123, Miraflores, Lima, Perú</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+51 987 654 321</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@exploraelmundo.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: 9:00 - 18:00</p>
+                            <p>Sábados: 9:00 - 13:00</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="destino">Destino de Interés</label>
+                        <select id="destino" name="destino">
+                            <option value="">Selecciona un destino</option>
+                            <option value="francia">Francia</option>
+                            <option value="japon">Japón</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="italia">Italia</option>
+                            <option value="australia">Australia</option>
+                            <option value="egipto">Egipto</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>ExploraElMundo</span>
+                    </a>
+                    <p>Inspirando viajes inolvidables desde 2010. Descubre el mundo con nosotros.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="assets/pages/destino.html">Destinos</a></li>
+                        <li><a href="assets/pages/experiencias.html">Experiencias</a></li>
+                        <li><a href="assets/pages/galeria.html">Galería</a></li>
+                        <li><a href="assets/pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Destinos Populares</h3>
+                    <ul>
+                        <li><a href="pages/francia.html">Francia</a></li>
+                        <li><a href="pages/japon.html">Japón</a></li>
+                        <li><a href="pages/brasil.html">Brasil</a></li>
+                        <li><a href="pages/italia.html">Italia</a></li>
+                        <li><a href="pages/australia.html">Australia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Suscríbete a nuestro Newsletter</h3>
+                    <p>Recibe ofertas exclusivas e inspiración para tus próximos viajes.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ExploraElMundo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="btn-top" aria-label="Ir arriba">↑</button>
+
+    <script src="assets/scripts/app.js"></script>
+</body>
+</html>

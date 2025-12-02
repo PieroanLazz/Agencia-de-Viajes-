@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasil - Explora el Mundo</title>
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .destino-detalle {
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .destino-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-xl);
+            align-items: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .destino-imagen {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .destino-imagen img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .destino-info h2 {
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .destino-meta {
+            display: flex;
+            gap: var(--spacing-lg);
+            margin: var(--spacing-md) 0;
+        }
+        
+        .meta-item {
+            text-align: center;
+        }
+        
+        .meta-item i {
+            font-size: var(--fs-large);
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-xs);
+        }
+        
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-xl) 0;
+        }
+        
+        .highlight-card {
+            background: var(--white);
+            padding: var(--spacing-md);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .highlight-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        @media (max-width: 768px) {
+            .destino-hero {
+                grid-template-columns: 1fr;
+            }
+            
+            .destino-imagen img {
+                height: 300px;
+            }
+            
+            .destino-meta {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra superior -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +51 987 654 321</span>
+                <span><i class="fas fa-envelope"></i> info@exploraelmundo.com</span>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">
+                <i class="fas fa-globe-americas"></i>
+                <span>ExploraElMundo</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="destino.html">Destinos</a></li>
+                <li><a href="experiencias.html">Experiencias</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado de página -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Brasil</h1>
+            <p>Tierra de carnaval, samba y una biodiversidad incomparable</p>
+        </div>
+    </section>
+
+    <!-- Sección de detalle del destino -->
+    <section class="destino-detalle">
+        <div class="container">
+            <div class="destino-hero">
+                <div class="destino-imagen">
+                    <img src="../img/brasil.jpg" alt="Cristo Redentor en Río de Janeiro, Brasil">
+                </div>
+                <div class="destino-info">
+                    <h2>Brasil: Ritmo, Color y Naturaleza</h2>
+                    <p>Brasil es un país de dimensiones continentales que ofrece una increíble diversidad de experiencias. Desde las playas doradas de Copacabana hasta la selva amazónica, pasando por las majestuosas cataratas de Iguazú, Brasil te espera con los brazos abiertos y el ritmo del samba.</p>
+                    
+                    <div class="destino-meta">
+                        <div class="meta-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>América del Sur</div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-star"></i>
+                            <div>4.7/5</div>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-users"></i>
+                            <div>6.6M visitantes/año</div>
+                        </div>
+                    </div>
+                    
+                    <div class="destino-actions">
+                        <a href="../pages/contacto.html" class="btn btn-primary">Consultar Viaje</a>
+                        <a href="../pages/galeria.html" class="btn btn-outline" style="color: var(--primary-color); border-color: var(--primary-color);">Ver Galería</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title">
+                <h2>Lo Mejor de Brasil</h2>
+                <p>Descubre la riqueza cultural y natural de este gigante sudamericano</p>
+            </div>
+
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <i class="fas fa-music"></i>
+                    <h4>Carnaval</h4>
+                    <p>El festival más grande y espectacular del mundo</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-tree"></i>
+                    <h4>Amazonas</h4>
+                    <p>El pulmón del planeta con biodiversidad única</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-umbrella-beach"></i>
+                    <h4>Playas</h4>
+                    <p>7,491 km de costa con playas paradisíacas</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-futbol"></i>
+                    <h4>Fútbol</h4>
+                    <p>La pasión por el deporte rey en el país del jogo bonito</p>
+                </div>
+            </div>
+
+            <div class="info-table-section">
+                <div class="section-title">
+                    <h2>Información Práctica</h2>
+                    <p>Todo lo que necesitas saber para planificar tu viaje</p>
+                </div>
+                <div class="table-container">
+                    <table class="info-table">
+                        <tbody>
+                            <tr>
+                                <td><strong>Idioma oficial</strong></td>
+                                <td>Portugués</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Moneda</strong></td>
+                                <td>Real Brasileño (R$)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mejor época</strong></td>
+                                <td>Mayo - Octubre (temporada seca)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Visa para peruanos</strong></td>
+                                <td>No requerida (hasta 90 días)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Clima</strong></td>
+                                <td>Tropical y subtropical, varía por región</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Voltaje</strong></td>
+                                <td>110V/220V, enchufes tipo N</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="/index.html" class="logo">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>ExploraElMundo</span>
+                    </a>
+                    <p>Inspirando viajes inolvidables desde 2010. Descubre el mundo con nosotros.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="destino.html">Destinos</a></li>
+                        <li><a href="experiencias.html">Experiencias</a></li>
+                        <li><a href="galeria.html">Galería</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Destinos Populares</h3>
+                    <ul>
+                        <li><a href="francia.html">Francia</a></li>
+                        <li><a href="japon.html">Japón</a></li>
+                        <li><a href="brasil.html" class="active">Brasil</a></li>
+                        <li><a href="italia.html">Italia</a></li>
+                        <li><a href="australia.html">Australia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Suscríbete a nuestro Newsletter</h3>
+                    <p>Recibe ofertas exclusivas e inspiración para tus próximos viajes.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ExploraElMundo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="btn-top" aria-label="Ir arriba">↑</button>
+
+    <script src="../scripts/app.js"></script>
+</body>
+</html>
